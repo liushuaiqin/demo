@@ -44,8 +44,7 @@ const rules = reactive({
   ],
   password: [
     { required: true, message: 'パスワードを入力してください', trigger: 'blur' },
-    { min: 6, max: 20, message: '正しいパスワードを入力してください', trigger: 'blur' },
-    //{pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/, message: '密码必须包含大写字母、小写字母、数字和特殊字符', trigger: 'blur'}
+    { min: 6, max: 20, message: '正しいパスワードを入力してください', trigger: 'blur' }
   ],
 })
 

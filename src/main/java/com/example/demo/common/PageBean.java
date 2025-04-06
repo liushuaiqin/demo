@@ -7,17 +7,17 @@ import lombok.NoArgsConstructor;
 import java.util.List;
 
 /**
- * @author ASUS
+ * @author liusq
  */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class PageBean<T> {
 
-	//总记录数
+	// 総レコード数
 	private Long total;
 
-	//当前页数据列表
+	// 現在のページのデータリスト
 	private List rows;
 
 }

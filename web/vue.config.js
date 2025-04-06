@@ -3,7 +3,7 @@ module.exports = defineConfig({
   transpileDependencies: true,
   lintOnSave: false,
   devServer: {
-    port: 9080,
+    port: 8080,
     client: {
       overlay: false
     },

@@ -6,15 +6,21 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
 /**
- * @author ASUS
+ * ログインマッパー
+ * @author liusq
  */
 @Mapper
 public interface LoginMapper {
 
+    /**
+     * ユーザーログイン処理
+     */
     @Select("select * from user where name = #{name} and password = #{password}")
     User login(String name, String password);
 
-    // 新增
+    /**
+     * ユーザー追加
+     */
     @Insert("insert into user (id,name,age,status,sex,address,phone,create_time,update_Time,password) values " +
             "(#{id},#{name},#{age},#{status},#{sex},#{address},#{phone},#{createTime},#{updateTime},#{password})")
     void add(User user);

@@ -11,19 +11,21 @@ import java.io.Serializable;
 @Data
 public class Result<T> implements Serializable {
 
-    //编码：1成功，0和其它数字为失败
+    // コード：1は成功、0および他の数字は失敗
     private Integer code;
-    //错误信息
+    // エラーメッセージ
     private String msg;
-    //数据
+    // データ
     private T data;
 
+    // 成功結果を作成します
     public static <T> Result<T> success() {
         Result<T> result = new Result<T>();
         result.code = 1;
         return result;
     }
 
+    // データを含む成功結果を作成します
     public static <T> Result<T> success(T object) {
         Result<T> result = new Result<T>();
         result.data = object;
@@ -31,6 +33,7 @@ public class Result<T> implements Serializable {
         return result;
     }
 
+    // エラーメッセージを含む失敗結果を作成します
     public static <T> Result<T> error(String msg) {
         Result result = new Result();
         result.msg = msg;
